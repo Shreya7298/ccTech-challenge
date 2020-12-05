@@ -24,7 +24,7 @@ int layout(Point p, Point q, Point r)
               (q.x - p.x) * (r.y - q.y); 
   
     if (val == 0) return 0;  
-    return (val > 0)? 1: 2; //  
+    return (val > 0)? 1: 2;  
 } 
   
 bool checkIntersect(Point p1, Point q1, Point p2, Point q2) 
@@ -68,10 +68,9 @@ bool isInside(Point polygon[], int n, Point p)
       
         if (doIntersect(polygon[i], polygon[next], p, extreme)) 
         { 
-            // If the point 'p' is colinear with line segment 'i-next', 
-            // then check if it lies on segment. If it lies, return true, 
-            // otherwise false 
-            if (orientation(polygon[i], p, polygon[next]) == 0) 
+           
+            
+           // if (orientation(polygon[i], p, polygon[next]) == 0) 
                return onSegment(polygon[i], p, polygon[next]); 
   
             count++; 
